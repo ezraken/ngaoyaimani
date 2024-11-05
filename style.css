@@ -1,0 +1,116 @@
+ /* CSS styles */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    background-color: #FFD700; /* Yellow */
+    color: #006400; /* Dark Green */
+    padding: 1em;
+    text-align: center;
+  }
+
+  /* Navigation bar styling */
+  nav {
+    background-color: #006400;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    color: white;
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Hover effects */
+  nav ul li a:hover {
+    background-color: #FFD700;
+    color: #006400;
+  }
+
+  /* Dropdown menu styling */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #006400;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #FFD700;
+    color: #006400;
+  }
+
+  /* Show dropdown on hover */
+  nav ul li:hover .dropdown-content {
+    display: block;
+  }
+
+  .container {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: #006400;
+  }
+
+  .card {
+    background-color: #FFFACD;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .card h3 {
+    color: #006400;
+    margin-top: 0;
+  }
+
+  .card p {
+    margin: 0.5em 0;
+  }
+
+  footer {
+    background-color: #FFD700;
+    color: #006400;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+  }
+
+  .social-media-icons a {
+    margin: 0 5px;
+    color: #006400;
+    font-size: 1.2em;
+  }

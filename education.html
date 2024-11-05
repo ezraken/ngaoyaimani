@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Pillar - Ngao Ya Imani International</title>
+  <link rel="stylesheet" href="styles.css">
+  <style> /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #FFD700; /* Yellow */
+      color: #006400; /* Dark Green */
+      padding: 1em;
+      text-align: center;
+    }
+
+    /* Navigation bar styling */
+    nav {
+      background-color: #006400;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      padding: 1em;
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover effects */
+    nav ul li a:hover {
+      background-color: #FFD700;
+      color: #006400;
+    }
+
+    /* Dropdown menu styling */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #006400;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 1em;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #FFD700;
+      color: #006400;
+    }
+
+    /* Show dropdown on hover */
+    nav ul li:hover .dropdown-content {
+      display: block;
+    }
+
+    .container {
+      padding: 2em;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #006400;
+    }
+    /* Button styling */
+    .home-button {
+      background-color: #4CAF50; /* Green background */
+      color: white; /* White text */
+      border: none; /* No border */
+      padding: 15px 30px; /* Padding for size */
+      text-align: center; /* Center text */
+      text-decoration: none; /* No underline */
+      display: inline-block; /* Make it an inline block */
+      font-size: 16px; /* Font size */
+      border-radius: 5px; /* Rounded corners */
+      transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+      cursor: pointer; /* Pointer cursor on hover */
+      margin: 10px 0; /* Margin for spacing */
+    }
+
+    /* Hover effect */
+    .home-button:hover {
+      background-color: #45a049; /* Darker green */
+      transform: scale(1.05); /* Slightly grow the button */
+    }
+
+    /* Animation on load */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .home-button {
+      animation: fadeIn 1s ease; /* Fade-in effect */
+    }
+
+    .card {
+      background-color: #FFFACD;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+      color: #006400;
+      margin-top: 0;
+    }
+
+    .card p {
+      margin: 0.5em 0;
+    }
+
+    footer {
+      background-color: #FFD700;
+      color: #006400;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+
+    .social-media-icons a {
+      margin: 0 5px;
+      color: #006400;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Education Pillar</h1>
+</header>
+
+<main class="container">
+  <h2>Empowering Through Education</h2>
+  <p>The Education Pillar is dedicated to providing vulnerable children with access to safe, quality education from pre-primary to secondary levels. This program ensures that children receive the support they need to thrive in a rapidly advancing world.</p>
+
+  <h3>Key Areas of Focus</h3>
+  <ul>
+    <li><strong>Access to Quality Education</strong>: Through partnerships and sponsorships, we fund school fees, learning materials, and essential resources to help children complete their schooling.</li>
+    <li><strong>Digital Literacy</strong>: Training programs introduce digital skills, empowering students with the knowledge to navigate the modern world.</li>
+    <li><strong>Scholarship and Mentorship Programs</strong>: Through sponsorships, we help students gain access to mentorship, educational counseling, and career guidance to ensure lifelong success.</li>
+  </ul>
+
+  
+  <button class="home-button" onclick="window.location.href='index.html';">Go to Home</button>
+</main>
+
+<footer>
+  <p>&copy; 2024 Ngao Ya Imani International</p>
+</footer>
+
+</body>
+</html>

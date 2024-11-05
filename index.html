@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ngao Ya Imani International</title>
+  <style>
+    /* Your CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #FFD700; /* Yellow */
+      color: #006400; /* Dark Green */
+      padding: 1em;
+      text-align: center;
+    }
+
+    header .logo img{
+        height: 6rem;
+        border-radius: 50%;
+    }
+
+    /* Navigation bar styling */
+    nav {
+      background-color: #006400;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      padding: 1em;
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Hover effects */
+    nav ul li a:hover {
+      background-color: #FFD700;
+      color: #006400;
+    }
+
+    /* Dropdown menu styling */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #006400;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 1em;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #FFD700;
+      color: #006400;
+    }
+
+    /* Show dropdown on hover */
+    nav ul li:hover .dropdown-content {
+      display: block;
+    }
+
+    .container {
+      padding: 2em;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #006400;
+      text-align: center;
+    }
+
+    .card {
+      background-color: #FFFACD;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #006400;
+      margin-top: 0;
+    }
+
+    .card p {
+      margin: 0.5em 0;
+    }
+
+    footer {
+      background-color: #FFD700;
+      color: #006400;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
+
+    .social-media-icons a {
+      margin: 0 5px;
+      color: #006400;
+      font-size: 1.2em;
+    }
+
+    /* Button alignment */
+    .cta-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ngao Ya Imani International</h1>
+  <a href="" class="logo"> <img src="image/ngao img.webp" alt=""></a>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a>
+      <div class="dropdown-content">
+        <a href="#mission">Our Mission</a>
+        <a href="#vision">Our Vision</a>
+        <a href="#values">Our Values</a>
+        <a href="board.html">Board Members</a>
+      </div>
+    </li>
+    <li><a href="#programs">Programs</a>
+      <div class="dropdown-content">
+        <a href="#education">Education Pillar</a>
+        <a href="#training">Trainings & Empowerment</a>
+        <a href="#women-empowerment">Women Empowerment</a>
+        <a href="#environment">Environmental Conservation</a>
+      </div>
+    </li>
+    <li><a href="media.html">Media Gallery</a></li>
+    <li><a href="#donate">Donations</a></li>
+    <li><a href="#sponsorship">Sponsorship</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="#news">News</a></li>
+  </ul>
+</nav>
+
+<div class="container" id="home">
+  <h2>Welcome to Ngao Ya Imani International</h2>
+  <p>We are committed to transforming lives in Laikipia Central, Kenya, by providing access to education, promoting environmental sustainability, empowering women, and supporting sustainable livelihoods. Our programs are designed to uplift and empower children and families, helping them overcome poverty and build brighter futures. Join us in creating lasting change and bringing hope to those in need, making a meaningful impact one community at a time. Together, we can foster resilience, opportunity, and growth for generations to come.</p>
+</div>
+
+<div class="container" id="about">
+  <h2>About Us</h2>
+  <div class="card" id="mission">
+    <h3>Our Mission</h3>
+    <p>Our mission is to follow Jesus Christ where the need is greatest, work with the poor and oppressed to promote human transformation, help make their voices heard, and empower them to challenge the structures that keep them in poverty.</p>
+  </div>
+
+  <div class="card" id="vision">
+    <h3>Our Vision</h3>
+    <p>Our vision is to see people freed from poverty, living transformed lives, and fulfilling their God-given potential. We pursue this vision through four key pillars: Education, Trainings, Skills & Empowerment, Women Empowerment, and Natural Resource Management.</p>
+  </div>
+
+  <div class="card" id="values">
+    <h3>Our Values</h3>
+    <p>As a Christian organization, our work is inspired by Christian values, but we serve people of all faiths and backgrounds without discrimination. We strive to be Christ-centered, compassionate, courageous, truthful, and servant-hearted in all we do.</p>
+  </div>
+</div>
+
+<div class="container" id="programs">
+  <h2>Our Programs</h2>
+  
+  <div class="card" id="education">
+    <h3>Education Pillar</h3>
+    <p>We empower vulnerable children by providing access to safe, quality education from pre-primary to secondary levels. Through child sponsorship, we support education, healthcare, and essential needs. Additionally, we promote digital literacy to prepare children for the modern world.<li><a href="education.html">Learn More</a></li></p>
+  </div>
+  
+  <div class="card" id="training">
+    <h3>Trainings, Skills and Empowerment Pillar</h3>
+    <p>This pillar focuses on empowering youth through Ready to Work initiatives in collaboration with vocational facing industry-relevant certifications and hands-on training. We also provide financial literacy and entrepreneurship programs to equip individuals with essential financial management and business skills. <li><a href="training.html">Learn More</a></li></p>
+  </div>
+  
+  <div class="card" id="women-empowerment">
+    <h3>Women Empowerment Pillar</h3>
+    <p>We emphasize empowering women who are often financially excluded. Through saving groups, women in rural areas can save, lend, and invest together, fostering dignity, household resilience, and social cohesion. Additionally, we train women on nutrition-sensitive agriculture, enabling them to provide basic needs and build livelihoods, breaking cycles of poverty.<li><a href="women.html">Learn More</a></li></p>
+  </div>
+  
+  <div class="card" id="environment">
+    <h3>Environment Conservation and Integrated Livelihoods Pillar</h3>
+    <p>To combat climate change, we commit to projects that create green jobs and build resilience in vulnerable communities. Our campaigns target young people and children to promote awareness of climate issues. Together, we work to mitigate the impacts of climate change and foster sustainability.  <li><a href="environment.html">Learn More</a></li></p>
+  </div>
+</div>
+
+<div class="container" id="donate">
+  <h2>Donations</h2>
+  <div class="card">
+    <p>Your donation to Ngao Ya Imani International provides nutritious meals, educational support, health resources, and empowerment programs for marginalized communities in Kenya. Contributions also aid families facing crises, helping them recover and rebuild. Join us in creating lasting change by donating once, supporting monthly, sponsoring a child, or legacy giving.
+        </p>
+        <button onclick="openNewPage()">Donate Now</button>
+
+        <script>
+            function openNewPage() {
+                window.location.href = "receive.html"; // Replace 'newpage.html' with your new HTML file name
+            }
+        </script>
+  </div>
+</div>
+
+<div class="container" id="sponsorship">
+  <h2>Sponsorship</h2>
+  <div class="card">
+    <p>Request for Sponsorship
+
+        Are you a student seeking financial assistance for your education? Ngao Ya Imani International offers sponsorship opportunities designed to support students in need, helping them access quality education and essential resources. Our sponsorship program covers school fees, learning materials, and other necessities, empowering students to focus on their studies, achieve academic success, and work toward a brighter future. Complete the form below to submit your sponsorship request, and take the first step toward achieving your educational goals with the support you deserve.<a href="form.html">Sponsorship Form</a></p>
+  </div>
+</div>
+
+<div class="container" id="contact">
+  <h2>Contact Us</h2>
+  <div class="card">
+    <p>Phone: +254 729 452 766 or +1 (217) 550 7751</p>
+    <p>Email: info@ngaoyaimaniintl.org</p>
+  </div>
+</div>
+
+<div class="container" id="news">
+  <h2>Subscribe to Our Newsletter</h2>
+  <div class="card">
+    <form>
+      <label for="newsletter-email">Email:</label>
+      <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email"><br><br>
+      <button type="submit">Subscribe</button>
+      <p>Please subscribe to our newsletter</p>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>Follow Us:</p>
+  <div class="social-media-icons">
+    <a href="https://www.youtube.com">YouTube</a> |
+    <a href="https://www.facebook.com">Facebook</a> |
+    <a href="https://www.twitter.com">Twitter</a> |
+    <a href="https://www.instagram.com">Instagram</a>
+  </div>
+  <p>&copy;CopyRight|All Rights Served|@2024 Ngao Ya Imani International</p>
+</footer>
+
+</body>
+</html>
