@@ -10,8 +10,6 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
-      display: flex;
-      min-height: 100vh;
     }
 
     header {
@@ -31,23 +29,6 @@
       border-radius: 50%;
     }
 
-    /* SIDE NAVIGATION */
-    nav {
-      background-color: #006400;
-      position: fixed;
-      top: 70px; /* height of header */
-      left: 0;
-      width: 250px;
-      height: calc(100vh - 70px);
-      overflow-y: auto;
-      transition: transform 0.3s ease;
-      z-index: 1000;
-    }
-
-    nav.hidden {
-      transform: translateX(-250px);
-    }
-
     .menu-toggle {
       display: none;
       font-size: 2rem;
@@ -62,11 +43,27 @@
       border-radius: 4px;
     }
 
+    nav {
+      background-color: #006400;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 250px;
+      height: calc(100vh - 70px);
+      overflow-y: auto;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      transform: translateX(0);
+    }
+
+    nav:not(.active) {
+      transform: translateX(-250px);
+    }
+
     nav ul.nav-menu {
       list-style: none;
       margin: 0;
       padding: 0;
-      display: block;
     }
 
     nav ul.nav-menu li {
@@ -88,24 +85,15 @@
       color: #006400;
     }
 
-    /* DROPDOWN STYLES */
     nav ul.nav-menu li .dropdown {
       display: none;
       background-color: #004d00;
-      padding-left: 1em;
-    }
-
-    nav ul.nav-menu li .dropdown li a {
-      padding: 0.75em 1.5em;
-      color: white;
-      font-weight: normal;
     }
 
     nav ul.nav-menu li.has-dropdown > a::after {
       content: " ▼";
       float: right;
       font-size: 0.8em;
-      line-height: 1em;
       margin-left: 5px;
     }
 
@@ -113,14 +101,10 @@
       display: block;
     }
 
-    /* CONTENT */
     .content-wrapper {
-      flex: 1;
-      margin-left: 250px;
-      padding: 100px 2em 2em 2em; /* top padding to avoid header */
       max-width: 1200px;
-      margin-right: auto;
-      margin-left: auto;
+      margin: 100px auto 0 auto;
+      padding: 2em;
     }
 
     h2 {
@@ -147,7 +131,6 @@
       text-align: center;
       padding: 1em;
       margin-top: 2em;
-      clear: both;
     }
 
     .social-media-icons a {
@@ -167,28 +150,22 @@
       margin-top: 1rem;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       .menu-toggle {
         display: block;
       }
+
       nav {
         transform: translateX(-250px);
-        position: fixed;
-        top: 70px;
-        left: 0;
-        height: calc(100vh - 70px);
-        width: 250px;
       }
+
       nav.active {
         transform: translateX(0);
       }
+
       .content-wrapper {
         margin-left: 0;
-        padding: 100px 1em 1em 1em;
-      }
-      nav ul.nav-menu li.has-dropdown > a::after {
-        float: right;
+        padding: 120px 1em 1em 1em;
       }
     }
   </style>
@@ -202,8 +179,8 @@
 
 <div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
-<nav id="side-menu" class="hidden">
-  <ul class="nav-menu" id="nav-menu">
+<nav id="side-menu">
+  <ul class="nav-menu">
     <li><a href="#home">Home</a></li>
     <li class="has-dropdown">
       <a href="#about">About Us</a>
@@ -217,10 +194,10 @@
     <li class="has-dropdown">
       <a href="#programs">Programs</a>
       <ul class="dropdown">
-        <li><a href="#education">Education Pillar</a></li>
-        <li><a href="#training">Trainings & Empowerment</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#training">Training</a></li>
         <li><a href="#women-empowerment">Women Empowerment</a></li>
-        <li><a href="#environment">Environmental Conservation</a></li>
+        <li><a href="#environment">Environment</a></li>
       </ul>
     </li>
     <li><a href="media.html">Media Gallery</a></li>
