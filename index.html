@@ -1,275 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ngao Ya Imani International</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
+    :root {
+      --primary-color: #006400; /* Green */
+      --secondary-color: #FFD700; /* Yellow */
+      --background-color: #ffffff; /* White */
     }
 
-    header {
-      background-color: #f4f80b;
-      color: #006400;
-      padding: 1em;
+    body {
+      background-color: var(--background-color);
+      color: var(--primary-color);
+    }
+
+    .hero {
+      background: url('image/hero.jpg') center center/cover no-repeat;
+      height: 80vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       position: relative;
     }
 
-    header .logo img {
-      height: 6rem;
-      border-radius: 50%;
-    }
-
-    .hamburger {
-      font-size: 2rem;
-      cursor: pointer;
-      color: white;
+    .hero::after {
+      content: "";
       position: absolute;
-      top: 1rem;
-      left: 1rem;
-      z-index: 1001;
-    }
-
-    .sidebar {
-      height: 100%;
-      width: 250px;
-      position: fixed;
       top: 0;
-      left: -250px;
-      background-color: #006400;
-      overflow-x: hidden;
-      transition: 0.3s;
-      padding-top: 4rem;
-      z-index: 1000;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 100, 0, 0.6);
     }
 
-    .sidebar a {
-      padding: 1rem;
-      text-decoration: none;
-      font-size: 1rem;
-      color: white;
-      display: block;
-      transition: 0.2s;
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .donate-btn {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
       font-weight: bold;
+      border: none;
     }
 
-    .sidebar a:hover {
-      background-color: #FFD700;
-      color: #006400;
-    }
-
-    .dropdown-content {
-      display: none;
-      padding-left: 1rem;
-      background-color: #004d00;
-    }
-
-    .sidebar a.dropdown-toggle:hover + .dropdown-content {
-      display: block;
-    }
-
-    .container {
-      padding: 2em;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    h2 {
-      color: #006400;
-      text-align: center;
-    }
-
-    .card {
-      background-color: #FFFACD;
-      padding: 1em;
-      margin-bottom: 1.5em;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .card h3 {
-      color: #006400;
-      margin-top: 0;
-    }
-
-    .card p {
-      margin: 0.5em 0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #4CAF50;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 1rem;
-      text-align: center;
+    .donate-btn:hover {
+      background-color: #e6c200;
+      color: var(--primary-color);
     }
 
     footer {
-      background-color: #FFD700;
-      color: #006400;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      padding: 2rem;
       text-align: center;
-      padding: 1em;
-      margin-top: 2em;
     }
 
-    .social-media-icons a {
-      margin: 0 5px;
-      color: #006400;
-      font-size: 1.2em;
+    .navbar {
+      background-color: var(--primary-color) !important;
+    }
+
+    .navbar-brand, .nav-link, .dropdown-item {
+      color: var(--background-color) !important;
+    }
+
+    .nav-link:hover, .dropdown-item:hover {
+      background-color: var(--secondary-color) !important;
+      color: var(--primary-color) !important;
     }
   </style>
 </head>
+
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt="Logo" height="50">
+        Ngao Ya Imani
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About Us</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#mission">Our Mission</a></li>
+              <li><a class="dropdown-item" href="#vision">Our Vision</a></li>
+              <li><a class="dropdown-item" href="#values">Our Values</a></li>
+              <li><a class="dropdown-item" href="board.html">Board Members</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Programs</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="patrick.html">Patrick</a></li>
+              <li><a class="dropdown-item" href="#education">Education</a></li>
+              <li><a class="dropdown-item" href="#training">Trainings</a></li>
+              <li><a class="dropdown-item" href="#women">Women Empowerment</a></li>
+              <li><a class="dropdown-item" href="#environment">Environment</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<!-- Hamburger Icon -->
-<div class="hamburger" onclick="toggleSidebar()">☰</div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1 class="display-4 fw-bold">Transforming Lives in Kenya</h1>
+      <p class="lead">Together, we empower communities through education, sustainability, and faith-driven action.</p>
+      <a href="#donate" class="btn donate-btn btn-lg mt-3">Donate Now</a>
+    </div>
+  </section>
 
-<header>
-  <h1>Ngao Ya Imani International</h1>
-  <a href="#" class="logo">
-    <img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt="Logo">
-  </a>
-</header>
+  <!-- About Section -->
+  <section class="py-5" id="about">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <h3 id="mission">Our Mission</h3>
+          <p>To follow Christ where the need is greatest, empowering the poor and vulnerable.</p>
+        </div>
+        <div class="col-md-4">
+          <h3 id="vision">Our Vision</h3>
+          <p>Freed from poverty, living transformed lives, fulfilling God-given potential.</p>
+        </div>
+        <div class="col-md-4">
+          <h3 id="values">Our Values</h3>
+          <p>Christ-centered, courageous, compassionate, and committed to the truth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Sidebar Navigation -->
-<div id="mySidebar" class="sidebar">
-  <a href="#home">Home</a>
-  <a class="dropdown-toggle">About Us</a>
-  <div class="dropdown-content">
-    <a href="#mission">Our Mission</a>
-    <a href="#vision">Our Vision</a>
-    <a href="#values">Our Values</a>
-    <a href="board.html">Board Members</a>
-  </div>
-  <a class="dropdown-toggle">Programs</a>
-  <div class="dropdown-content">
-    <a href="education.html">Education Pillar</a>
-    <a href="training.html">Trainings & Empowerment</a>
-    <a href="women-empowerment.html">Women Empowerment</a>
-    <a href="environment.html">Environmental Conservation</a>
-  </div>
-  <a href="media.html">Media Gallery</a>
-  <a href="donate.html">Donations</a>
-  <a href="form.html">Sponsorship</a>
-  <a href="contact.html">Contact Us</a>
-  <a href="news.html">News</a>
-</div>
+  <!-- Programs Section -->
+  <section class="py-5 bg-light" id="programs">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Programs</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow">
+            <div class="card-body">
+              <h5 class="card-title">Education</h5>
+              <p class="card-text">Providing access to quality education and digital literacy for children.</p>
+              <a href="#education" class="btn btn-outline-success">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow">
+            <div class="card-body">
+              <h5 class="card-title">Trainings & Skills</h5>
+              <p class="card-text">Equipping youth with vocational and entrepreneurial skills for independence.</p>
+              <a href="#training" class="btn btn-outline-success">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow">
+            <div class="card-body">
+              <h5 class="card-title">Women Empowerment</h5>
+              <p class="card-text">Supporting rural women with savings groups and agricultural training.</p>
+              <a href="#women" class="btn btn-outline-success">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow">
+            <div class="card-body">
+              <h5 class="card-title">Environmental Conservation</h5>
+              <p class="card-text">Engaging communities in green projects to fight climate change.</p>
+              <a href="#environment" class="btn btn-outline-success">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Content Section -->
-<div class="container" id="home">
-  <h2>Welcome to Ngao Ya Imani International</h2>
-  <p>We are committed to transforming lives in Laikipia Central, Kenya, by providing access to education, promoting environmental sustainability, empowering women, and supporting sustainable livelihoods. Our programs are designed to uplift and empower children and families, helping them overcome poverty and build brighter futures. Join us in creating lasting change and bringing hope to those in need, making a meaningful impact one community at a time. Together, we can foster resilience, opportunity, and growth for generations to come.</p>
-</div>
+  <!-- Donation Section -->
+  <section class="bg-light py-5" id="donate">
+    <div class="container text-center">
+      <h2>Make a Difference Today</h2>
+      <p>Your support provides meals, education, and empowerment to families in need.</p>
+      <a href="receive.html" class="btn donate-btn btn-lg">Give Now</a>
+    </div>
+  </section>
 
-<div class="container" id="about">
-  <h2>About Us</h2>
-  <div class="card" id="mission">
-    <h3>Our Mission</h3>
-    <p>Our mission is to follow Jesus Christ where the need is greatest, work with the poor and oppressed to promote human transformation, help make their voices heard, and empower them to challenge the structures that keep them in poverty.</p>
-  </div>
+  <!-- Footer -->
+  <footer>
+    <p>Follow Us:</p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+    <p class="mt-3">&copy; 2025 Ngao Ya Imani International. All Rights Reserved.</p>
+  </footer>
 
-  <div class="card" id="vision">
-    <h3>Our Vision</h3>
-    <p>Our vision is to see people freed from poverty, living transformed lives, and fulfilling their God-given potential. We pursue this vision through four key pillars: Education, Trainings, Skills & Empowerment, Women Empowerment, and Natural Resource Management.</p>
-  </div>
-
-  <div class="card" id="values">
-    <h3>Our Values</h3>
-    <p>As a Christian organization, our work is inspired by Christian values, but we serve people of all faiths and backgrounds without discrimination. We strive to be Christ-centered, compassionate, courageous, truthful, and servant-hearted in all we do.</p>
-  </div>
-</div>
-
-<div class="container" id="programs">
-  <h2>Our Programs</h2>
-  <div class="card" id="education">
-    <h3>Education Pillar</h3>
-    <p>We empower vulnerable children by providing access to safe, quality education from pre-primary to secondary levels. Through child sponsorship, we support education, healthcare, and essential needs. Additionally, we promote digital literacy to prepare children for the modern world.<li><a href="education.html">Learn More</a></li></p>
-  </div>
-
-  <div class="card" id="training">
-    <h3>Trainings & Empowerment</h3>
-    <p>This pillar focuses on empowering youth through Ready to Work initiatives in collaboration with vocational facing industry-relevant certifications and hands-on training. We also provide financial literacy and entrepreneurship programs to equip individuals with essential financial management and business skills. <li><a href="training.html">Learn More</a></li></p>
-  </div>
-
-  <div class="card" id="women-empowerment">
-    <h3>Women Empowerment</h3>
-    <p>We emphasize empowering women who are often financially excluded. Through saving groups, women in rural areas can save, lend, and invest together, fostering dignity, household resilience, and social cohesion. Additionally, we train women on nutrition-sensitive agriculture, enabling them to provide basic needs and build livelihoods, breaking cycles of poverty.<li><a href="women.html">Learn More</a></li></p>
-  </div>
-
-  <div class="card" id="environment">
-    <h3>Environmental Conservation</h3>
-    <p>To combat climate change, we commit to projects that create green jobs and build resilience in vulnerable communities. Our campaigns target young people and children to promote awareness of climate issues. Together, we work to mitigate the impacts of climate change and foster sustainability.  <li><a href="environment.html">Learn More</a></li></p>
-  </div>
-</div>
-
-<div class="container" id="donate">
-  <h2>Donations</h2>
-  <div class="card">
-    <p>Your donation to Ngao Ya Imani International provides nutritious meals, educational support, health resources, and empowerment programs for marginalized communities in Kenya. Contributions also aid families facing crises, helping them recover and rebuild. Join us in creating lasting change by donating once, supporting monthly, sponsoring a child, or legacy giving.
-    </p>
-    <button onclick="window.location.href='receive.html'">Donate Now</button>
-  </div>
-</div>
-
-<div class="container" id="sponsorship">
-  <h2>Sponsorship</h2>
-  <div class="card">
-    <p>Request for Sponsorship
-
-        Are you a student seeking financial assistance for your education? Ngao Ya Imani International offers sponsorship opportunities designed to support students in need, helping them access quality education and essential resources. Our sponsorship program covers school fees, learning materials, and other necessities, empowering students to focus on their studies, achieve academic success, and work toward a brighter future. Complete the form below to submit your sponsorship request, and take the first step toward achieving your educational goals with the support you deserve.<a href="form.html">Sponsorship Form</a></p>
-  </div>
-</div>
-
-<div class="container" id="contact">
-  <h2>Contact Us</h2>
-  <div class="card">
-    <p>Phone: +254 729 452 766 / +1 (865) 321 6594</p>
-    <p>Email: ngaoyaimaniinternational@gmail.com</p>
-  </div>
-</div>
-
-<div class="container" id="news">
-  <h2>Subscribe to Our Newsletter</h2>
-  <div class="card">
-    <form>
-      <label for="newsletter-email">Email:</label>
-      <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email"><br><br>
-      <button type="submit">Subscribe</button>
-      <p>Please subscribe to our newsletter</p>
-    </form>
-  </div>
-</div>
-
-<footer>
-  <p>Follow Us:</p>
-  <div class="social-media-icons">
-    <a href="https://www.youtube.com/ngaoyaimaniinternational">YouTube</a> |
-    <a href="https://www.facebook.com/ngaoyaimaniinternational">Facebook</a> |
-    <a href="https://www.twitter.com/ngaoyaimaniinternational">Twitter</a> |
-    <a href="https://www.instagram.com/ngaoyaimaniinternational">Instagram</a>
-  </div>
-  <p>&copy; 2025 Ngao Ya Imani International | All Rights Reserved</p>
-</footer>
-
-<!-- JavaScript -->
-<script>
-  function toggleSidebar() {
-    const sidebar = document.getElementById("mySidebar");
-    sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
-  }
-</script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
