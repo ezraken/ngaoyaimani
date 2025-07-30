@@ -165,11 +165,14 @@ nav ul li ul.dropdown a:hover {
 </header>
 
 <nav>
-  <ul>
+  <div class="menu-toggle" id="menu-toggle">
+    &#9776;
+  </div>
+  <ul class="nav-menu" id="nav-menu">
     <li><a href="#home">Home</a></li>
 
-    <li>
-      <a href="#about">About Us ▾</a>
+    <li class="has-dropdown">
+      <a href="#about">About Us</a>
       <ul class="dropdown">
         <li><a href="#mission">Our Mission</a></li>
         <li><a href="#vision">Our Vision</a></li>
@@ -178,8 +181,8 @@ nav ul li ul.dropdown a:hover {
       </ul>
     </li>
 
-    <li>
-      <a href="#programs">Programs ▾</a>
+    <li class="has-dropdown">
+      <a href="#programs">Programs</a>
       <ul class="dropdown">
         <li><a href="#education">Education Pillar</a></li>
         <li><a href="#training">Trainings & Empowerment</a></li>
@@ -195,6 +198,7 @@ nav ul li ul.dropdown a:hover {
     <li><a href="#news">News</a></li>
   </ul>
 </nav>
+
 
 
 <div class="container" id="home">
