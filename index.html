@@ -8,14 +8,19 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #006400; /* Green */
-      --secondary-color: #FFD700; /* Yellow */
-      --background-color: #ffffff; /* White */
+      --primary-color: #FFD700; /* Yellow */
+      --secondary-color: #ffffff; /* White */
+      --accent-color: #006400; /* Green */
+       --footer-bg: #f9fd03; /* Pale green */
+      --footer-alt: #fded07; /* Pale yellow */
     }
-
+    
     body {
-      background-color: var(--background-color);
-      color: var(--primary-color);
+      background-image: url("imani.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: rgb(185, 172, 172);
     }
 
     .hero {
@@ -45,20 +50,20 @@
     }
 
     .donate-btn {
-      background-color: var(--secondary-color);
-      color: var(--primary-color);
+      background-color: var(--primary-color);
+      color: var(--accent-color);
       font-weight: bold;
       border: none;
     }
 
     .donate-btn:hover {
       background-color: #e6c200;
-      color: var(--primary-color);
+      color: var(--accent-color);
     }
 
     footer {
-      background-color: var(--secondary-color);
-      color: var(--primary-color);
+      background-color: rgb(252, 248, 3);
+      color: rgb(248, 244, 2);
       padding: 2rem;
       text-align: center;
     }
@@ -68,23 +73,49 @@
     }
 
     .navbar-brand, .nav-link, .dropdown-item {
-      color: var(--background-color) !important;
+      color: var(--accent-color) !important;
     }
 
     .nav-link:hover, .dropdown-item:hover {
-      background-color: var(--secondary-color) !important;
-      color: var(--primary-color) !important;
+      background-color: var(--accent-color) !important;
+      color: var(--secondary-color) !important;
     }
+
+    .program-card {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .program-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 100, 0, 0.5);
+    }
+
+    .program-card-body {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
   </style>
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top position-relative">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
         <img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt="Logo" height="50">
-        Ngao Ya Imani
+        Ngao Ya Imani International
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -92,26 +123,35 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About Us</a>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Who We Are</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#mission">Our Mission</a></li>
-              <li><a class="dropdown-item" href="#vision">Our Vision</a></li>
-              <li><a class="dropdown-item" href="#values">Our Values</a></li>
-              <li><a class="dropdown-item" href="board.html">Board Members</a></li>
+              <li><a class="dropdown-item" href="#about">About Us</a></li>
+              <li><a class="dropdown-item" href="#history">Our History</a></li>
+              <li><a class="dropdown-item" href="#leadership">Our Leadership</a></li>
+              <li><a class="dropdown-item" href="#vision">Our Vision & Values</a></li>
+              <li><a class="dropdown-item" href="#faith">Our Faith</a></li>
+              <li><a class="dropdown-item" href="#partners">Our Partners</a></li>
+              <li><a class="dropdown-item" href="#structure">Our Structure</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Programs</a>
+             <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">What We Do</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="patrick.html">Patrick</a></li>
+              <li><a class="dropdown-item" href="#focus">Focus Areas</a></li>
+              <li><a class="dropdown-item" href="#child-protection">Child Protection</a></li>
+              <li><a class="dropdown-item" href="#water">Clean Water and Sanitation</a></li>
               <li><a class="dropdown-item" href="#education">Education</a></li>
-              <li><a class="dropdown-item" href="#training">Trainings</a></li>
-              <li><a class="dropdown-item" href="#women">Women Empowerment</a></li>
-              <li><a class="dropdown-item" href="#environment">Environment</a></li>
+              <li><a class="dropdown-item" href="#fragile">Fragile Context Programming</a></li>
+              <li><a class="dropdown-item" href="#health">Health & Nutrition</a></li>
+              <li><a class="dropdown-item" href="#livelihoods">Livelihoods</a></li>
+              <li><a class="dropdown-item" href="#sectors">View All Sectors</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+          <li class="nav-item"><a class="nav-link" href="#jobs">Jobs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#volunteer">Volunteer</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stories">Stories & Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
           <li class="nav-item"><a class="nav-link" href="#donate">Donate</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -128,64 +168,44 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="py-5" id="about">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4">
-          <h3 id="mission">Our Mission</h3>
-          <p>To follow Christ where the need is greatest, empowering the poor and vulnerable.</p>
-        </div>
-        <div class="col-md-4">
-          <h3 id="vision">Our Vision</h3>
-          <p>Freed from poverty, living transformed lives, fulfilling God-given potential.</p>
-        </div>
-        <div class="col-md-4">
-          <h3 id="values">Our Values</h3>
-          <p>Christ-centered, courageous, compassionate, and committed to the truth.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Programs Section -->
-  <section class="py-5 bg-light" id="programs">
+  <section class="py-5" id="programs">
     <div class="container">
-      <h2 class="text-center mb-4">Our Programs</h2>
+      <h2 class="text-center mb-5" style="color: yellow;">Our Programs</h2>
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow">
-            <div class="card-body">
+          <div class="program-card" style="background-image: url('image/education.jpg');">
+            <div class="program-card-body">
               <h5 class="card-title">Education</h5>
-              <p class="card-text">Providing access to quality education and digital literacy for children.</p>
-              <a href="#education" class="btn btn-outline-success">Learn More</a>
+              <p>Providing access to quality education and digital literacy.</p>
+              <a href="#education" class="btn btn-light btn-sm">Learn More</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow">
-            <div class="card-body">
+          <div class="program-card" style="background-image: url('image/training.jpg');">
+            <div class="program-card-body">
               <h5 class="card-title">Trainings & Skills</h5>
-              <p class="card-text">Equipping youth with vocational and entrepreneurial skills for independence.</p>
-              <a href="#training" class="btn btn-outline-success">Learn More</a>
+              <p>Vocational training and entrepreneurship for the youth.</p>
+              <a href="#training" class="btn btn-light btn-sm">Learn More</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow">
-            <div class="card-body">
+          <div class="program-card" style="background-image: url('image/women.jpg');">
+            <div class="program-card-body">
               <h5 class="card-title">Women Empowerment</h5>
-              <p class="card-text">Supporting rural women with savings groups and agricultural training.</p>
-              <a href="#women" class="btn btn-outline-success">Learn More</a>
+              <p>Helping women thrive through savings and agriculture.</p>
+              <a href="#women" class="btn btn-light btn-sm">Learn More</a>
             </div>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
-          <div class="card h-100 border-0 shadow">
-            <div class="card-body">
-              <h5 class="card-title">Environmental Conservation</h5>
-              <p class="card-text">Engaging communities in green projects to fight climate change.</p>
-              <a href="#environment" class="btn btn-outline-success">Learn More</a>
+          <div class="program-card" style="background-image: url('image/environment.jpg');">
+            <div class="program-card-body">
+              <h5 class="card-title">Environment</h5>
+              <p>Creating awareness and green jobs to fight climate change.</p>
+              <a href="#environment" class="btn btn-light btn-sm">Learn More</a>
             </div>
           </div>
         </div>
@@ -193,25 +213,64 @@
     </div>
   </section>
 
-  <!-- Donation Section -->
-  <section class="bg-light py-5" id="donate">
-    <div class="container text-center">
-      <h2>Make a Difference Today</h2>
-      <p>Your support provides meals, education, and empowerment to families in need.</p>
-      <a href="receive.html" class="btn donate-btn btn-lg">Give Now</a>
+   <footer style="background-color: var(--footer-bg); color: #000;" class="pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>About Us</h5>
+          <ul class="list-unstyled">
+            <li><a href="#vision" class="text-dark">Our Vision & Values</a></li>
+            <li><a href="#history" class="text-dark">Our History</a></li>
+            <li><a href="#leadership" class="text-dark">Our Leadership</a></li>
+            <li><a href="#structure" class="text-dark">Our Structure</a></li>
+            <li><a href="#partners" class="text-dark">Our Partners</a></li>
+            <li><a href="#faq" class="text-dark">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Our Approaches</h5>
+          <ul class="list-unstyled">
+            <li><a href="#child-sponsorship" class="text-dark">Child Sponsorship</a></li>
+            <li><a href="#campaign" class="text-dark">Global Campaign</a></li>
+            <li><a href="#strategy" class="text-dark">Our Global Strategy</a></li>
+            <li><a href="#faith" class="text-dark">The Role of Faith</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Work With Us</h5>
+          <ul class="list-unstyled">
+            <li><a href="#culture" class="text-dark">Our Culture</a></li>
+            <li><a href="#careers" class="text-dark">Careers & Internships</a></li>
+            <li><a href="#positions" class="text-dark">Explore Open Positions</a></li>
+            <li><a href="#internships" class="text-dark">Internships</a></li>
+            <li><a href="#tenders" class="text-dark">Open Tenders</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Connect With Us</h5>
+          <div class="mb-2">
+            <a href="#" class="text-dark me-3"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-dark me-3"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-dark me-3"><i class="fab fa-youtube fa-lg"></i></a>
+            <a href="#" class="text-dark"><i class="fab fa-instagram fa-lg"></i></a>
+          </div>
+          <form class="mt-3">
+            <div class="mb-2">
+              <input type="email" class="form-control" placeholder="Email Address">
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="terms">
+              <label class="form-check-label" for="terms">
+                I agree to Ngao's Terms & Conditions.
+              </label>
+            </div>
+            <button type="submit" class="btn" style="background-color: var(--footer-alt); color: #000;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center small mb-0">&copy; 2025 Ngao Ya Imani International | <a href="#" class="text-dark">Privacy Policy</a> | <a href="#" class="text-dark">Terms of Use</a></p>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>Follow Us:</p>
-    <div class="d-flex justify-content-center gap-3">
-      <a href="#">Facebook</a>
-      <a href="#">YouTube</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
-    </div>
-    <p class="mt-3">&copy; 2025 Ngao Ya Imani International. All Rights Reserved.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
