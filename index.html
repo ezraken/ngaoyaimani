@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ngao Ya Imani International</title>
-<style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -133,10 +133,14 @@
 </head>
 <body>
 
+<!-- Hamburger Icon -->
+<div class="hamburger" onclick="toggleSidebar()">☰</div>
+
 <header>
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
   <h1>Ngao Ya Imani International</h1>
-  <a href="#" class="logo"><img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt="Logo"></a>
+  <a href="#" class="logo">
+    <img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt="Logo">
+  </a>
 </header>
 
 <!-- Sidebar Navigation -->
@@ -151,20 +155,19 @@
   </div>
   <a class="dropdown-toggle">Programs</a>
   <div class="dropdown-content">
-    <a href="patrick.html">Patrick</a>
-    <a href="#education">Education Pillar</a>
-    <a href="#training">Trainings & Empowerment</a>
-    <a href="#women-empowerment">Women Empowerment</a>
-    <a href="#environment">Environmental Conservation</a>
+    <a href="education.html">Education Pillar</a>
+    <a href="training.html">Trainings & Empowerment</a>
+    <a href="women-empowerment.html">Women Empowerment</a>
+    <a href="environment.html">Environmental Conservation</a>
   </div>
   <a href="media.html">Media Gallery</a>
-  <a href="#donate">Donations</a>
-  <a href="#sponsorship">Sponsorship</a>
-  <a href="#contact">Contact Us</a>
-  <a href="#news">News</a>
+  <a href="donate.html">Donations</a>
+  <a href="form.html">Sponsorship</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="news.html">News</a>
 </div>
 
-
+<!-- Content Section -->
 <div class="container" id="home">
   <h2>Welcome to Ngao Ya Imani International</h2>
   <p>We are committed to transforming lives in Laikipia Central, Kenya, by providing access to education, promoting environmental sustainability, empowering women, and supporting sustainable livelihoods. Our programs are designed to uplift and empower children and families, helping them overcome poverty and build brighter futures. Join us in creating lasting change and bringing hope to those in need, making a meaningful impact one community at a time. Together, we can foster resilience, opportunity, and growth for generations to come.</p>
@@ -190,24 +193,23 @@
 
 <div class="container" id="programs">
   <h2>Our Programs</h2>
-  
   <div class="card" id="education">
     <h3>Education Pillar</h3>
     <p>We empower vulnerable children by providing access to safe, quality education from pre-primary to secondary levels. Through child sponsorship, we support education, healthcare, and essential needs. Additionally, we promote digital literacy to prepare children for the modern world.<li><a href="education.html">Learn More</a></li></p>
   </div>
-  
+
   <div class="card" id="training">
-    <h3>Trainings, Skills and Empowerment Pillar</h3>
+    <h3>Trainings & Empowerment</h3>
     <p>This pillar focuses on empowering youth through Ready to Work initiatives in collaboration with vocational facing industry-relevant certifications and hands-on training. We also provide financial literacy and entrepreneurship programs to equip individuals with essential financial management and business skills. <li><a href="training.html">Learn More</a></li></p>
   </div>
-  
+
   <div class="card" id="women-empowerment">
-    <h3>Women Empowerment Pillar</h3>
+    <h3>Women Empowerment</h3>
     <p>We emphasize empowering women who are often financially excluded. Through saving groups, women in rural areas can save, lend, and invest together, fostering dignity, household resilience, and social cohesion. Additionally, we train women on nutrition-sensitive agriculture, enabling them to provide basic needs and build livelihoods, breaking cycles of poverty.<li><a href="women.html">Learn More</a></li></p>
   </div>
-  
+
   <div class="card" id="environment">
-    <h3>Environment Conservation and Integrated Livelihoods Pillar</h3>
+    <h3>Environmental Conservation</h3>
     <p>To combat climate change, we commit to projects that create green jobs and build resilience in vulnerable communities. Our campaigns target young people and children to promote awareness of climate issues. Together, we work to mitigate the impacts of climate change and foster sustainability.  <li><a href="environment.html">Learn More</a></li></p>
   </div>
 </div>
@@ -216,14 +218,8 @@
   <h2>Donations</h2>
   <div class="card">
     <p>Your donation to Ngao Ya Imani International provides nutritious meals, educational support, health resources, and empowerment programs for marginalized communities in Kenya. Contributions also aid families facing crises, helping them recover and rebuild. Join us in creating lasting change by donating once, supporting monthly, sponsoring a child, or legacy giving.
-        </p>
-        <button onclick="openNewPage()">Donate Now</button>
-
-        <script>
-            function openNewPage() {
-                window.location.href = "receive.html"; // Replace 'newpage.html' with your new HTML file name
-            }
-        </script>
+    </p>
+    <button onclick="window.location.href='receive.html'">Donate Now</button>
   </div>
 </div>
 
@@ -239,7 +235,7 @@
 <div class="container" id="contact">
   <h2>Contact Us</h2>
   <div class="card">
-    <p>Phone: +254 729 452 766 or +1 (865) 321 6594</p>
+    <p>Phone: +254 729 452 766 / +1 (865) 321 6594</p>
     <p>Email: ngaoyaimaniinternational@gmail.com</p>
   </div>
 </div>
@@ -259,13 +255,14 @@
 <footer>
   <p>Follow Us:</p>
   <div class="social-media-icons">
-    <a href="https://youtube.com/@ngaoyaimaniinternational?si=nq-3XMuyTKk8a1oL">YouTube</a> |
+    <a href="https://www.youtube.com/ngaoyaimaniinternational">YouTube</a> |
     <a href="https://www.facebook.com/ngaoyaimaniinternational">Facebook</a> |
     <a href="https://www.twitter.com/ngaoyaimaniinternational">Twitter</a> |
     <a href="https://www.instagram.com/ngaoyaimaniinternational">Instagram</a>
   </div>
-  <p>&copy;CopyRight|All Rights Served|@2025 Ngao Ya Imani International</p>
+  <p>&copy; 2025 Ngao Ya Imani International | All Rights Reserved</p>
 </footer>
+
 <!-- JavaScript -->
 <script>
   function toggleSidebar() {
