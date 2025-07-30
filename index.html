@@ -53,11 +53,11 @@
       overflow-y: auto;
       transition: transform 0.3s ease;
       z-index: 1000;
-      transform: translateX(0);
+      transform: translateX(-250px);
     }
 
-    nav:not(.active) {
-      transform: translateX(-250px);
+    nav.active {
+      transform: translateX(0);
     }
 
     nav ul.nav-menu {
@@ -155,14 +155,6 @@
         display: block;
       }
 
-      nav {
-        transform: translateX(-250px);
-      }
-
-      nav.active {
-        transform: translateX(0);
-      }
-
       .content-wrapper {
         margin-left: 0;
         padding: 120px 1em 1em 1em;
@@ -173,11 +165,10 @@
 <body>
 
 <header>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
   <h1>Ngao Ya Imani International</h1>
   <a href="#" class="logo"><img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt="Logo"></a>
 </header>
-
-<div class="menu-toggle" id="menu-toggle">&#9776;</div>
 
 <nav id="side-menu">
   <ul class="nav-menu">
