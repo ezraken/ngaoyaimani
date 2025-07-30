@@ -159,6 +159,56 @@
         margin-left: 0;
         padding: 120px 1em 1em 1em;
       }
+      /* Hamburger menu icon */
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  z-index: 1001;
+}
+
+/* Sidebar menu */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background-color: #006400;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 4rem;
+  z-index: 1000;
+}
+
+.sidebar a {
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  display: block;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  background-color: #FFD700;
+  color: #006400;
+}
+
+.sidebar .dropdown-content {
+  display: none;
+  padding-left: 1rem;
+  background-color: #004d00;
+}
+
+.sidebar a.dropdown-toggle:hover + .dropdown-content {
+  display: block;
+}
+
     }
   </style>
 </head>
@@ -170,34 +220,34 @@
   <a href="#" class="logo"><img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt="Logo"></a>
 </header>
 
-<nav id="side-menu">
-  <ul class="nav-menu">
-    <li><a href="#home">Home</a></li>
-    <li class="has-dropdown">
-      <a href="#about">About Us</a>
-      <ul class="dropdown">
-        <li><a href="#mission">Our Mission</a></li>
-        <li><a href="#vision">Our Vision</a></li>
-        <li><a href="#values">Our Values</a></li>
-        <li><a href="board.html">Board Members</a></li>
-      </ul>
-    </li>
-    <li class="has-dropdown">
-      <a href="#programs">Programs</a>
-      <ul class="dropdown">
-        <li><a href="#education">Education</a></li>
-        <li><a href="#training">Training</a></li>
-        <li><a href="#women-empowerment">Women Empowerment</a></li>
-        <li><a href="#environment">Environment</a></li>
-      </ul>
-    </li>
-    <li><a href="media.html">Media Gallery</a></li>
-    <li><a href="#donate">Donations</a></li>
-    <li><a href="#sponsorship">Sponsorship</a></li>
-    <li><a href="#contact">Contact Us</a></li>
-    <li><a href="#news">News</a></li>
-  </ul>
-</nav>
+<!-- Hamburger Icon -->
+<div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+<!-- Sidebar Menu -->
+<div id="mySidebar" class="sidebar">
+  <a href="#home">Home</a>
+  <a class="dropdown-toggle">About Us</a>
+  <div class="dropdown-content">
+    <a href="#mission">Our Mission</a>
+    <a href="#vision">Our Vision</a>
+    <a href="#values">Our Values</a>
+    <a href="board.html">Board Members</a>
+  </div>
+  <a class="dropdown-toggle">Programs</a>
+  <div class="dropdown-content">
+    <a href="patrick.html">Patrick</a>
+    <a href="#education">Education Pillar</a>
+    <a href="#training">Trainings & Empowerment</a>
+    <a href="#women-empowerment">Women Empowerment</a>
+    <a href="#environment">Environmental Conservation</a>
+  </div>
+  <a href="media.html">Media Gallery</a>
+  <a href="#donate">Donations</a>
+  <a href="#sponsorship">Sponsorship</a>
+  <a href="#contact">Contact Us</a>
+  <a href="#news">News</a>
+</div>
+
 <div class="container" id="home">
   <h2>Welcome to Ngao Ya Imani International</h2>
   <p>We are committed to transforming lives in Laikipia Central, Kenya, by providing access to education, promoting environmental sustainability, empowering women, and supporting sustainable livelihoods. Our programs are designed to uplift and empower children and families, helping them overcome poverty and build brighter futures. Join us in creating lasting change and bringing hope to those in need, making a meaningful impact one community at a time. Together, we can foster resilience, opportunity, and growth for generations to come.</p>
@@ -300,21 +350,15 @@
   <p>&copy;CopyRight|All Rights Served|@2025 Ngao Ya Imani International</p>
 </footer>
 <script>
-  const toggle = document.getElementById("menu-toggle");
-  const sideMenu = document.getElementById("side-menu");
-
-  toggle.addEventListener("click", () => {
-    sideMenu.classList.toggle("active");
-  });
-
-  document.querySelectorAll(".has-dropdown > a").forEach(link => {
-    link.addEventListener("click", e => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        link.parentElement.classList.toggle("active");
-      }
-    });
-  });
+  function toggleSidebar() {
+    const sidebar = document.getElementById("mySidebar");
+    if (sidebar.style.left === "0px") {
+      sidebar.style.left = "-250px";
+    } else {
+      sidebar.style.left = "0px";
+    }
+  }
 </script>
+
 </body>
 </html>
