@@ -59,27 +59,39 @@
     }
 
     /* Dropdown menu styling */
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #006400;
-      min-width: 200px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
+   nav ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #006400;
+  min-width: 200px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+}
 
-    .dropdown-content a {
-      color: white;
-      padding: 1em;
-      text-decoration: none;
-      display: block;
-      transition: background-color 0.3s ease;
-    }
+nav ul li:hover ul.dropdown {
+  display: block;
+}
 
-    .dropdown-content a:hover {
-      background-color: #FFD700;
-      color: #006400;
-    }
+nav ul li ul.dropdown li {
+  list-style: none;
+}
+
+nav ul li ul.dropdown a {
+  padding: 1em;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li ul.dropdown a:hover {
+  background-color: #FFD700;
+  color: #006400;
+}
+
 
     /* Show dropdown on hover */
     nav ul li:hover .dropdown-content {
