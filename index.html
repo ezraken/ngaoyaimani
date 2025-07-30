@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ngao Ya Imani International</title>
-  <style>
+<style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -13,15 +13,11 @@
     }
 
     header {
-      background-color: #FFD700;
+      background-color: #f4f80b;
       color: #006400;
       padding: 1em;
       text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1001;
+      position: relative;
     }
 
     header .logo img {
@@ -29,82 +25,58 @@
       border-radius: 50%;
     }
 
-    .menu-toggle {
-      display: none;
+    .hamburger {
       font-size: 2rem;
-      color: white;
       cursor: pointer;
-      padding: 1em;
-      background-color: #006400;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 1100;
-      border-radius: 4px;
-    }
-
-    nav {
-      background-color: #006400;
-      position: fixed;
-      top: 70px;
-      left: 0;
-      width: 250px;
-      height: calc(100vh - 70px);
-      overflow-y: auto;
-      transition: transform 0.3s ease;
-      z-index: 1000;
-      transform: translateX(-250px);
-    }
-
-    nav.active {
-      transform: translateX(0);
-    }
-
-    nav ul.nav-menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul.nav-menu li {
-      position: relative;
-      border-bottom: 1px solid #004d00;
-    }
-
-    nav ul.nav-menu li a {
       color: white;
-      padding: 1em 1.5em;
-      display: block;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      z-index: 1001;
     }
 
-    nav ul.nav-menu li a:hover {
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #006400;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 4rem;
+      z-index: 1000;
+    }
+
+    .sidebar a {
+      padding: 1rem;
+      text-decoration: none;
+      font-size: 1rem;
+      color: white;
+      display: block;
+      transition: 0.2s;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
       background-color: #FFD700;
       color: #006400;
     }
 
-    nav ul.nav-menu li .dropdown {
+    .dropdown-content {
       display: none;
+      padding-left: 1rem;
       background-color: #004d00;
     }
 
-    nav ul.nav-menu li.has-dropdown > a::after {
-      content: " ▼";
-      float: right;
-      font-size: 0.8em;
-      margin-left: 5px;
-    }
-
-    nav ul.nav-menu li.has-dropdown.active .dropdown {
+    .sidebar a.dropdown-toggle:hover + .dropdown-content {
       display: block;
     }
 
-    .content-wrapper {
-      max-width: 1200px;
-      margin: 100px auto 0 auto;
+    .container {
       padding: 2em;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     h2 {
@@ -118,11 +90,30 @@
       margin-bottom: 1.5em;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
     }
 
     .card h3 {
       color: #006400;
+      margin-top: 0;
+    }
+
+    .card p {
+      margin: 0.5em 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      text-align: center;
     }
 
     footer {
@@ -137,78 +128,6 @@
       margin: 0 5px;
       color: #006400;
       font-size: 1.2em;
-      text-decoration: none;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background-color: #4CAF50;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .content-wrapper {
-        margin-left: 0;
-        padding: 120px 1em 1em 1em;
-      }
-      /* Hamburger menu icon */
-.hamburger {
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
-  position: absolute;
-  top: 1.5rem;
-  left: 1rem;
-  z-index: 1001;
-}
-
-/* Sidebar menu */
-.sidebar {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  background-color: #006400;
-  overflow-x: hidden;
-  transition: 0.3s;
-  padding-top: 4rem;
-  z-index: 1000;
-}
-
-.sidebar a {
-  padding: 1rem;
-  text-decoration: none;
-  font-size: 1rem;
-  color: white;
-  display: block;
-  transition: 0.2s;
-  font-weight: bold;
-}
-
-.sidebar a:hover {
-  background-color: #FFD700;
-  color: #006400;
-}
-
-.sidebar .dropdown-content {
-  display: none;
-  padding-left: 1rem;
-  background-color: #004d00;
-}
-
-.sidebar a.dropdown-toggle:hover + .dropdown-content {
-  display: block;
-}
-
     }
   </style>
 </head>
@@ -220,10 +139,7 @@
   <a href="#" class="logo"><img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt="Logo"></a>
 </header>
 
-<!-- Hamburger Icon -->
-<div class="hamburger" onclick="toggleSidebar()">☰</div>
-
-<!-- Sidebar Menu -->
+<!-- Sidebar Navigation -->
 <div id="mySidebar" class="sidebar">
   <a href="#home">Home</a>
   <a class="dropdown-toggle">About Us</a>
@@ -247,6 +163,7 @@
   <a href="#contact">Contact Us</a>
   <a href="#news">News</a>
 </div>
+
 
 <div class="container" id="home">
   <h2>Welcome to Ngao Ya Imani International</h2>
@@ -349,14 +266,11 @@
   </div>
   <p>&copy;CopyRight|All Rights Served|@2025 Ngao Ya Imani International</p>
 </footer>
+<!-- JavaScript -->
 <script>
   function toggleSidebar() {
     const sidebar = document.getElementById("mySidebar");
-    if (sidebar.style.left === "0px") {
-      sidebar.style.left = "-250px";
-    } else {
-      sidebar.style.left = "0px";
-    }
+    sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
   }
 </script>
 
