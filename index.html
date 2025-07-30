@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ngao Ya Imani International</title>
   <style>
-    /* Your CSS styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -14,36 +13,45 @@
     }
 
     header {
-      background-color: #FFD700; /* Yellow */
-      color: #006400; /* Dark Green */
+      background-color: #FFD700;
+      color: #006400;
       padding: 1em;
       text-align: center;
     }
 
-    header .logo img{
-        height: 6rem;
-        border-radius: 50%;
+    header .logo img {
+      height: 6rem;
+      border-radius: 50%;
     }
 
-    /* Navigation bar styling */
+    /* NAVIGATION STYLES */
     nav {
       background-color: #006400;
-      display: flex;
-      justify-content: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
-
-    nav ul li {
       position: relative;
     }
 
-    nav ul li a {
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      padding: 1em;
+    }
+
+    nav ul.nav-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul.nav-menu li {
+      position: relative;
+    }
+
+    nav ul.nav-menu li a {
       color: white;
       padding: 1em;
       display: block;
@@ -52,149 +60,69 @@
       transition: background-color 0.3s ease;
     }
 
-    /* Hover effects */
-    nav ul li a:hover {
+    nav ul.nav-menu li a:hover {
       background-color: #FFD700;
       color: #006400;
     }
-/* Hamburger icon */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  padding: 1em;
-}
 
-/* Base nav styles */
-nav {
-  background-color: #006400;
-  position: relative;
-}
+    /* DROPDOWN STYLES */
+    nav ul.nav-menu li .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #006400;
+      min-width: 200px;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+    }
 
-nav ul.nav-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    nav ul.nav-menu li .dropdown li a {
+      padding: 1em;
+      color: white;
+    }
 
-nav ul.nav-menu li {
-  position: relative;
-}
-
-nav ul.nav-menu li a {
-  color: white;
-  padding: 1em;
-  display: block;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-nav ul.nav-menu li a:hover {
-  background-color: #FFD700;
-  color: #006400;
-}
-
-/* Dropdowns */
-nav ul.nav-menu li .dropdown {
-  display: none;
-  position: absolute;
-  background-color: #006400;
-  min-width: 200px;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-}
-
-nav ul.nav-menu li .dropdown li a {
-  padding: 1em;
-  color: white;
-}
-
-nav ul.nav-menu li:hover .dropdown {
-  display: block;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    text-align: right;
-  }
-
-  nav ul.nav-menu {
-    flex-direction: column;
-    display: none;
-    background-color: #006400;
-  }
-
-  nav ul.nav-menu.active {
-    display: flex;
-  }
-
-  nav ul.nav-menu li {
-    width: 100%;
-    text-align: left;
-  }
-
-  nav ul.nav-menu li .dropdown {
-    position: static;
-  }
-
-  nav ul.nav-menu li.has-dropdown > a::after {
-    content: " ▼";
-    float: right;
-  }
-
-  nav ul.nav-menu li.has-dropdown.active .dropdown {
-    display: block;
-  }
-}
-
-    /* Dropdown menu styling */
-   nav ul li ul.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #006400;
-  min-width: 200px;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  padding: 0;
-  margin: 0;
-}
-
-nav ul li:hover ul.dropdown {
-  display: block;
-}
-
-nav ul li ul.dropdown li {
-  list-style: none;
-}
-
-nav ul li ul.dropdown a {
-  padding: 1em;
-  color: white;
-  text-decoration: none;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-nav ul li ul.dropdown a:hover {
-  background-color: #FFD700;
-  color: #006400;
-}
-
-
-    /* Show dropdown on hover */
-    nav ul li:hover .dropdown-content {
+    nav ul.nav-menu li:hover .dropdown {
       display: block;
     }
 
+    /* RESPONSIVE NAVIGATION */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        text-align: right;
+      }
+
+      nav ul.nav-menu {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #006400;
+      }
+
+      nav ul.nav-menu.active {
+        display: flex;
+      }
+
+      nav ul.nav-menu li {
+        width: 100%;
+        text-align: left;
+      }
+
+      nav ul.nav-menu li .dropdown {
+        position: static;
+      }
+
+      nav ul.nav-menu li.has-dropdown > a::after {
+        content: " ▼";
+        float: right;
+      }
+
+      nav ul.nav-menu li.has-dropdown.active .dropdown {
+        display: block;
+      }
+    }
+
+    /* CONTENT STYLING */
     .container {
       padding: 2em;
       max-width: 1200px;
@@ -212,19 +140,11 @@ nav ul li ul.dropdown a:hover {
       margin-bottom: 1.5em;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
     }
 
     .card h3 {
       color: #006400;
-      margin-top: 0;
-    }
-
-    .card p {
-      margin: 0.5em 0;
     }
 
     footer {
@@ -241,7 +161,6 @@ nav ul li ul.dropdown a:hover {
       font-size: 1.2em;
     }
 
-    /* Button alignment */
     .cta-button {
       display: inline-block;
       background-color: #4CAF50;
@@ -250,7 +169,6 @@ nav ul li ul.dropdown a:hover {
       text-decoration: none;
       border-radius: 5px;
       margin-top: 1rem;
-      text-align: center;
     }
   </style>
 </head>
@@ -258,16 +176,13 @@ nav ul li ul.dropdown a:hover {
 
 <header>
   <h1>Ngao Ya Imani International</h1>
-  <a href="" class="logo"> <img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt=""></a>
+  <a href="#" class="logo"><img src="image/NGAO YA IMANI INTERNATIONAL LOGO.png" alt="Logo"></a>
 </header>
 
 <nav>
-  <div class="menu-toggle" id="menu-toggle">
-    &#9776;
-  </div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
   <ul class="nav-menu" id="nav-menu">
     <li><a href="#home">Home</a></li>
-
     <li class="has-dropdown">
       <a href="#about">About Us</a>
       <ul class="dropdown">
@@ -277,7 +192,6 @@ nav ul li ul.dropdown a:hover {
         <li><a href="board.html">Board Members</a></li>
       </ul>
     </li>
-
     <li class="has-dropdown">
       <a href="#programs">Programs</a>
       <ul class="dropdown">
@@ -287,7 +201,6 @@ nav ul li ul.dropdown a:hover {
         <li><a href="#environment">Environmental Conservation</a></li>
       </ul>
     </li>
-
     <li><a href="media.html">Media Gallery</a></li>
     <li><a href="#donate">Donations</a></li>
     <li><a href="#sponsorship">Sponsorship</a></li>
@@ -399,6 +312,23 @@ nav ul li ul.dropdown a:hover {
   </div>
   <p>&copy;CopyRight|All Rights Served|@2025 Ngao Ya Imani International</p>
 </footer>
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("nav-menu");
 
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+
+  // Dropdown click toggle on mobile
+  document.querySelectorAll(".has-dropdown > a").forEach(link => {
+    link.addEventListener("click", e => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        link.parentElement.classList.toggle("active");
+      }
+    });
+  });
+</script>
 </body>
 </html>
